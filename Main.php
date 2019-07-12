@@ -5,10 +5,10 @@
         class Main extends \Idno\Common\Plugin {
 
             function registerPages() {
-                \Idno\Core\site()->addPageHandler('/play/edit/?', '\IdnoPlugins\Play\Pages\Edit');
-                \Idno\Core\site()->addPageHandler('/play/edit/([A-Za-z0-9]+)/?', '\IdnoPlugins\Play\Pages\Edit');
-                \Idno\Core\site()->addPageHandler('/play/delete/([A-Za-z0-9]+)/?', '\IdnoPlugins\Play\Pages\Delete');
-                \Idno\Core\site()->addPageHandler('/play/([A-Za-z0-9]+)/.*', '\Idno\Pages\Entity\View');
+                \Idno\Core\site()->routes()->addRoute('/play/edit/?', '\IdnoPlugins\Play\Pages\Edit');
+                \Idno\Core\site()->routes()->addRoute('/play/edit/([A-Za-z0-9]+)/?', '\IdnoPlugins\Play\Pages\Edit');
+                \Idno\Core\site()->routes()->addRoute('/play/delete/([A-Za-z0-9]+)/?', '\IdnoPlugins\Play\Pages\Delete');
+                \Idno\Core\site()->routes()->addRoute('/play/([A-Za-z0-9]+)/.*', '\Idno\Pages\Entity\View');
             }
 
             /**
